@@ -12,6 +12,8 @@ from .views import (
     ListProjectMembersView,
     ListTasksView,
     TaskDetailView,
+    ListCommentsView,
+    CommentDetailsView,
 )
 
 urlpatterns = [
@@ -25,4 +27,6 @@ urlpatterns = [
     path('projects/<int:pk>/members/', ListProjectMembersView.as_view(), name='list_project_members'),
     path('projects/<int:project_id>/tasks/', ListTasksView.as_view(), name='list_tasks'),
     path('tasks/<int:pk>/', TaskDetailView.as_view(), name='task_detail'),
+    path('tasks/<int:task_id>/comments/', ListCommentsView.as_view(), name='list_comments'),
+    path('comments/<int:pk>/', CommentDetailsView.as_view(), name='comment_detail'),
 ]
