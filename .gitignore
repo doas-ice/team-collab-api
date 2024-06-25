@@ -1,0 +1,129 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.pki/
+db.sqlite3
+*.pem
+
+# If you are using SQLite database files
+*.sqlite3
+
+# Ignore shell scripts
+*.sh
+
+# Django migrations
+*/migrations/*
+
+# ENV
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code settings
+.vscode/
+.code-workspace
+
+# Pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+
+# Environments
+.env
+.env.test
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Rider
+.idea/
+*.sln
+*.suo
+*.tmp
+*.user
+.idea/
+.idea/*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Eclipse
+.project
+.cproject
+.settings/
+.metadata
+bin/
+tmp/
+
+# VS Code
+.vscode/
+
+# Other
+*.bak
+*.swp
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Coveralls reports
+.coveralls.yml
+
+# Sphinx documentation
+docs/_build/
