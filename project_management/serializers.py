@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User, Projects, ProjectMember
+from django.contrib.auth.models import User, Project, ProjectMember, Task
 from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
@@ -19,9 +19,9 @@ class UserSerializer(serializers.ModelSerializer):
             validated_data['password'] = make_password(validated_data['password'])
         return super(UserSerializer, self).update(instance, validated_data)
 
-class ProjectsSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Projects
+        model = Project
         fields = ['id', 'name', 'description', 'owner', 'created_at']
         read_only_fields = ['id', 'created_at']
 
@@ -29,3 +29,9 @@ class ProjectMemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectMember
         fields = ['id', 'project', 'user', 'role']
+
+class TaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = ['id', 'title', 'description', 'status', 'priority', 'assigned_to', 'project', 'created_at', 'due_date']
+        read_only_fields = ['id', 'created_at']
