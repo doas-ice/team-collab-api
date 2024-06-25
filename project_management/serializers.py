@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User, Projects
+from django.contrib.auth.models import User, Projects, ProjectMember
 from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
@@ -25,3 +25,7 @@ class ProjectsSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'owner', 'created_at']
         read_only_fields = ['id', 'created_at']
 
+class ProjectMemberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProjectMember
+        fields = ['id', 'project', 'user', 'role']
