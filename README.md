@@ -10,7 +10,7 @@ The following tools needs to be installed on the system
 ### Steps to Set Up the Project
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Sayed-Nahid/team-collab-api.git
+   git clone https://github.com/doas-ice/team-collab-api.git
    ```
    
 2. **Navigate to the Cloned Repository**
